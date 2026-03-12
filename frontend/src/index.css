@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* ===== Hydrofulness Design System ===== */
+
+@theme {
+  --color-primary: #0EA5E9;
+  --color-secondary: #10B981;
+  --color-accent: #F59E0B;
+  --color-danger: #EF4444;
+  --color-bg-dark: #0F172A;
+  --color-bg-surface: #1E293B;
+  --color-text-primary: #F8FAFC;
+  --color-text-muted: #94A3B8;
+
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ===== Animations ===== */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 300ms ease both;
+}
+
+/* ===== Leaflet CSS ===== */
+@import "leaflet/dist/leaflet.css";
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* ===== Leaflet Map Overrides ===== */
+.leaflet-container {
+  background: var(--color-bg-surface) !important;
+  border-radius: 0.75rem;
+}
+
+/* Fix: Popup de Leaflet con tema oscuro Hydrofulness */
+.leaflet-popup-content-wrapper {
+  background-color: #1E293B !important;
+  color: #F8FAFC !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+.leaflet-popup-tip {
+  background-color: #1E293B !important;
+}
+.leaflet-popup-content {
+  color: #F8FAFC !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+.leaflet-popup-content b,
+.leaflet-popup-content strong {
+  color: #0EA5E9 !important;
+}
+.leaflet-popup-close-button {
+  color: #94A3B8 !important;
+}
+.leaflet-popup-close-button:hover {
+  color: #F8FAFC !important;
+}

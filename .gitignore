@@ -1,0 +1,56 @@
+# ─────────────────────────────────────
+# Hydrofulness — .gitignore
+# ─────────────────────────────────────
+
+# ── Node / Frontend ──────────────────
+node_modules/
+dist/
+.vite/
+*.local
+
+# ── Python / Backend ─────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+*.egg-info/
+*.egg
+
+# ── Datos confidenciales ─────────────
+data/*.csv
+data/*.xlsx
+!data/.gitkeep
+
+# ── Entorno ──────────────────────────
+.env
+.env.local
+.env.production
+
+# ── Base de datos ────────────────────
+*.db
+*.sqlite3
+
+# ── IDE ──────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Docker ───────────────────────────
+docker-compose.override.yml
+
+# ── Jupyter ──────────────────────────
+.ipynb_checkpoints/
+
+# ── OS ───────────────────────────────
+*.log
+data/*.csv
+*.db
+data/*.csv
+*.db
